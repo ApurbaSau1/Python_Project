@@ -1,0 +1,105 @@
+body{
+    /* background: url('https://br.carmeuse.com/sites/default/files/styles/facebook_share/public/2020-02/contact%20us.png?itok=xcMDac3H') no-repeat center/cover; */
+    background: url('./contact.png') no-repeat center/cover;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.118);
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+h4{
+    color: aliceblue;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    margin:10px;
+}
+.form{
+    color: rgba(252, 252, 252, 0.405);
+    padding: 12px;
+    /* margin: 20px; */
+    /* width: 80%; */
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color:none;
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    justify-content: center;
+}
+.form label{
+    display: none;
+}
+.form input{
+    background-color: rgba(192, 148, 148, 0.315);
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: auto;
+    width: 100%;
+
+}
+.form-control {
+    text-align: center;
+}
+#id_msg{
+    text-align: justify;
+}
+
+textarea{
+    background-color: rgba(143, 119, 119, 0.323);
+    color:rgb(255, 255, 255);
+    font-size: 16px;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+.submit{
+    padding: 10px 20px;
+    margin-left: 60px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.Clear{
+    padding: 10px 20px;
+    margin-left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cancel{
+    padding: 10px 20px;
+    margin-left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+    size: 15px;
+    text-align: center;
+}

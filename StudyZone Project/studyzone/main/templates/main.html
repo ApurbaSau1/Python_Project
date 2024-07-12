@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon"href="{%static 'beach.png'%}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<div class="bgimg">
+</div>
+<body>
+    <div class="container">
+               <div class="header">
+                <div class="logo">
+                    <img src="{%static 'logo.jpg'%}" alt="" class="img">
+                </div>
+            
+            <div class="navbar">
+                
+                <!-- header end -->
+                <!-- manu start -->
+                {% include './manu.html'%}    
+            </div>
+        </div>  
+        <div class="notice">
+            <h5 class="text-center py-2 text-danger">--Notice--</h5>
+            <hr>
+            <a href="{%url 'exam'%}">
+            <marquee behavior="" direction="up" Scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+                <p class="text-primary">
+                    {%for i in notice%}
+            {{i.notice}}
+            {%endfor%}
+                </p>
+            </marquee>
+        </a>
+        </div>
+    </div>
+
+    <div class="img-slide">
+        <div class="slider  border border-3 border-dark">
+                <div class="slides">
+                    <input type="radio" id="radio1" name="radio-btn">
+                    <input type="radio" id="radio2"name="radio-btn">
+                    <input type="radio" id="radio3"name="radio-btn">
+                    <input type="radio" id="radio4"name="radio-btn">
+
+                    <div class="slide first">
+                    <img src="{% static 'pic1.jpg'%}"class="bgimage">
+                    </div>
+                    <div class="slide ">
+                        <img src="{%static 'pic2.jpg'%}" alt="">
+                    </div>
+                    <div class="slide ">
+                        <img src="{%static 'pic3.jpg'%}" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="{%static 'pic4.jpg'%}" alt="">
+                    </div>
+                    <div class="navigation_auto">
+                        <div class="auto_btn1"></div>
+                        <div class="auto_btn2"></div>
+                        <div class="auto_btn3"></div>
+                        <div class="auto_btn4"></div>
+                    </div>
+                </div>
+                    <div class="navigation_manual">
+                       <label for="radio1" class="manual-btn"></label>
+                       <label for="radio2" class="manual-btn"></label>
+                       <label for="radio3" class="manual-btn"></label>
+                       <label for="radio4" class="manual-btn"></label>
+                    </div>
+                
+        </div>
+        <script type="text/javascript">
+            var counter=1;
+            setInterval(function() {
+                document.getElementById('radio'+counter).checked=true;
+                counter++;
+                if(counter>4){
+                counter=1;
+                }
+
+                },10000);
+
+        </script>
+
+    </div>
+<!-- manu end -->
+<div class="marquee">
+    <marquee behavior="" direction="left" Scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+        <ul>
+            {%for i in allSubject %}
+            <li><a href="{%url 'read_code' i.sub_id %}">*{{i.sub_name}}||</a>
+            </li>
+            {% endfor%}
+        </ul>
+            
+    </marquee>
+</div>
+<a href="{%url 'contact'%}">
+<div class="wrap">
+        <i class="fa-solid fa-phone phone"></i>
+    </div>
+</a>
+<div class="working_page text-center">
+<h1>About Our Page</h1>
+<font face="Tahoma">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, necessitatibus? Tempora vero voluptatum excepturi consequatur voluptatem vel molestiae nulla? Iusto, consequatur nemo? Voluptas consequatur, dolorem dicta velit animi, totam explicabo praesentium at consectetur veritatis nihil beatae hic, distinctio doloremque! Adipisci quibusdam dolores sed enim, possimus delectus esse explicabo libero cumque!
+</font>
+<br><br>
+<a href="{%url 'about'%}" class="readmore"><font color="white">Read More </font> </a> 
+</div>
+        <div class="footer text-center" id="about">
+            <marquee behavior="" direction="up" Scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();" class="text-center px-3">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloribus vel quaerat aliquam rerum? Quaerat vel voluptatum voluptatibus quasi. Sequi eligendi eveniet, ipsam excepturi enim perspiciatis vero cupiditate similique voluptate aut suscipit necessitatibus rem nemo harum iure veniam delectus mollitia corporis ipsum sint voluptatibus quia. Nam, sit nulla inventore corrupti quam recusandae, ipsa iste minima quos modi quibusdam perferendis autem? Officiis eligendi voluptates accusamus exercitationem laborum, aut error corrupti reiciendis quam deserunt architecto fuga, maxime nulla similique blanditiis iusto fugit?
+            </marquee>
+            <marquee behavior="" direction="up" Scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();" class="text-center px-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloribus vel quaerat aliquam rerum? Quaerat vel voluptatum voluptatibus quasi. Sequi eligendi eveniet, ipsam excepturi enim perspiciatis vero cupiditate similique voluptate aut suscipit necessitatibus rem nemo harum iure veniam delectus mollitia corporis ipsum sint voluptatibus quia. Nam, sit nulla inventore corrupti quam recusandae, ipsa iste minima quos modi quibusdam perferendis autem? Officiis eligendi voluptates accusamus exercitationem laborum, aut error corrupti reiciendis quam deserunt architecto fuga, maxime nulla similique blanditiis iusto fugit?
+            </marquee>
+            
+        </div>
+            <div class="footerlogo">
+            <a href="#"> <img src="{%static 'whatsapp.png'%}"class="whatsapp" alt=""></a>
+            <a href="#"> <img src="{%static 'twitter.png'%}" alt=""></a>
+            <a href="#"> <img src="{%static 'insta.png'%}" alt=""></a>
+            <a href="#"> <img src="{%static 'Facebook.png'%}" alt=""></a>
+        </div>
+       
+        <div class="date text-bg-dark text-center">
+            @ 2023 kidsworld . All Rights Reserved
+        </div>
+      
+   
+</body>
+</html>

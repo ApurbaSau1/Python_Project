@@ -1,0 +1,83 @@
+   
+.navbar{
+    background-color: white;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 5;
+      top:-10px;
+      border-radius: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.579);
+      box-shadow: -10px 5px rgba(0, 0, 0, 0.435);
+      justify-content: center;
+    width: 950px;
+    margin: 0 180px;
+      /* height: 5000px; */
+  }
+  
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 750px;
+      gap: 10px;
+      justify-content: center;
+  }
+  .col-sm-2,.col-sm-1,.col-sm-3{
+      padding: 0px;
+      width: 110px;
+  }
+  .Programming{
+      margin-right: 20px;
+  }
+  .row-cols-2{
+      /* position: absolute; */
+      /* right: 0px; */
+      width: 90px;
+  }
+  .row-cols-3{
+      position: absolute;
+      right: 0px;
+      width: 250px;
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+  .row-cols-3 .col-sm-2{
+      grid-column-start: 2;
+  width: 150px;
+  } 
+  .row-cols-3 .col-sm-1{
+      grid-column-start: 1;
+  width: 100px;
+  } 
+  a{
+      text-decoration: none;
+   } 
+     a:link {
+      color: rgb(0, 0, 0);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 17px;
+    }  
+    a:visited{
+      text-decoration: underline;
+      color: rgb(0, 0, 0);
+    }
+    .active{
+      background-color:rgb(18, 140, 118);
+      border-radius: 50px;
+    }
+    .active a{
+      color: rgb(255, 255, 255);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  a:hover{
+      
+      color:rgba(69, 63, 63, 0.583);
+      /* text-shadow: -10px -5px  rgba(0, 0, 0, 0.345); */
+  }
+  .header .text,.edit,.del,.cpass{
+    display: none;
+    position: relative;
+  }
+
+    .headers .photo{
+        display: none;
+    }

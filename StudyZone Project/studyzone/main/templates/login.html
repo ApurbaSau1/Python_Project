@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login Page</title>
+    <!-- <link rel="stylesheet" href="{%static 'bootstrap.css'%}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'login.css'%}">
+  </head>
+  <body> 
+    <div class="sidepic border border-2">
+      <img src="{%static 'Login-02.jpg'%}" alt="">
+    </div>
+    <section class="container">
+      <h4>User Login</h4>
+        <form name="frm" method="post" >
+            {% csrf_token %}
+            {% for fm in frm %}
+            <div class="form-group">
+              {{fm.label_tag}}&nbsp;&nbsp; <span class="text-danger">{{fm.errors | striptags}}</span>
+              {{fm}}
+            </div>
+            {%endfor%}
+            <input type="checkbox" name="box" id="box" onclick ="reveal()" class="check">
+            <input type="submit" class="submit" value="Login"></input>
+            <input type="reset" class="Clear" value="Clear"></input>
+            <a href="{%url 'home'%}" class="cancel">Cancel</a> 
+          </div>
+        </form>
+        <ul>
+          <li><a href="{%url 'New-Registation'%}" class="Reg" target="_blank">New Registation</a></li>
+          <li> <a href="#" class="fpass">Forgate Password</a></li>
+        </ul>
+    
+    <div class="footerlogo">
+      <a href="#"> <img src="{%static 'whatsapp.png'%}"class="whatsapp" alt=""></a>
+      <a href="#"> <img src="{%static 'twitter.png'%}" alt=""></a>
+      <a href="#"> <img src="{%static 'insta.png'%}" alt=""></a>
+      <a href="#"> <img src="{%static 'Facebook.png'%}" alt=""></a>
+  </div>
+  {%if frm.non_field_errors %}
+  <script>
+    alert("Please check username and password")
+  </script>
+  {%endif%}
+</section>
+
+<!-- {%if error%}
+<script>
+  alert("Your Account has been Successfully Deleted")
+</script>
+{%endif%} -->
+<script type="text/javascript">
+  function reveal()
+  {
+  if(document.getElementById('box').checked)
+     {document.getElementById("id_password").type='text';}
+  else
+  document.getElementById("id_password").type='password';
+  }
+</script>
+</body>
+</html>

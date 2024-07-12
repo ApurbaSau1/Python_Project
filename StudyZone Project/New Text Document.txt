@@ -1,0 +1,23 @@
+else if(!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))
+          {
+            alert("Your Email id Is Not Valid");
+            return false;
+          
+          }
+          else if( contact.length<10){
+            alert("Your Contact Number Must Be at least 10 digits");
+            return false;
+          }
+          else if( contact.length>10){
+            alert("Your Contact Number Must Be at least 10 digits");
+            return false;
+          }
+          else if(pass.length<10&&cpass.length<10){
+            alert("your password must be at least 10 characters");
+            return false;
+          }
+          else if(pass!=cpass)
+          {
+            alert("Your Password and confirmation password are not equal!");
+            return false;
+javascript for new Registation

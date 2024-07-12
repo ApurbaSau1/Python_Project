@@ -1,0 +1,51 @@
+{% with request.resolver_match.url_name as url_name %}
+<!-- {{url_name}} -->
+<!-- {% load static %}
+<div class="logo">
+    <img src="{%static 'kidsworld.png'%}" alt="" class="img">
+</div> -->
+<div class="row text-center ">
+  
+    <div class="col-sm-1 ps-3 {% if url_name == 'home' %} active {% endif %}"><a href="{%url 'home'%}" target="_self" ><i class="fa-solid fa-house me-2"></i>Home</a></div>
+  
+    <div class="col-sm-1 {% if url_name == 'about' %} active {% endif %}" ><a href="{%url 'about'%}"> <i class="fa-solid fa-user me-1"></i>About</a></div>
+  
+    <div class="col-sm-3 {% if url_name == 'codding' %} active {% endif %}"><a href="{%url 'codding'%}"><i class="fa-thin fa-display  me-2"></i>Codding</a></div>
+  
+    <div class="col-sm-3 Education{% if url_name == 'view_programing' %} active {% endif %}"><a href="{%url 'view_programing'%}"><i class="fa-solid fa-graduation-cap fa-sm me-1"></i>Study</a> </div>
+    <div class="col-sm-2 {% if url_name == 'exam' %} active {% endif %}" ><a href="{%url 'exam'%}"><i class="fa-solid fa-file-lines fa-sm me-1"></i>Examination</a></div>
+    <div class="col-sm-2 {% if url_name == 'contact' %} active {%endif%}"><a href="{%url 'contact'%}"><i class="fa-solid fa-phone fa-xs me-2"></i>Contact Us</a></div>
+</div> 
+
+
+{% if request.user.is_authenticated  %}
+<div class="row row-cols-2 " >
+    <div class="col order-first text-end"><a href="{%url 'logout'%}">logout</a></div>
+</div>
+<div class="headers">
+    <i class="fa-regular fa-user fa-lg photo">
+        <div class="text">
+            {{request.user.first_name}}
+        </div>
+        <div class="edit">
+            <a href="{% url 'edit' %}"><i class="fa-solid fa-user-pen"></i>
+            </a>
+        </div>
+        <div class="del">
+           <a href="/delete/{{user.id}}" onclick="return confirm('Are you want to delete your account?')"><i class="fa-sharp fa-solid fa-trash"></i></a>
+        </div>
+        <div class="cpass">
+           <a href="{% url 'chng-pwd' %}"> <i class="fa-solid fa-lock"></i></a>
+        </div>
+    </i>
+
+</div>
+
+
+{% else %}
+<div class="row row-cols-3" >
+    <div class="col-sm-2  order-last text-start"><a href="{%url 'New-Registation'%}">New Registation</a></div>
+    <div class="col-sm-1  order-first text-end"><a href="{%url 'login'%}">LogIn</a></div>
+</div>
+{% endif %}
+{%endwith%}

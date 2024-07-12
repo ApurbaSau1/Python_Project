@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link rel="stylesheet" href="{%static 'bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'exam.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#submit").click(function()
+            {
+                $(".rb").show();
+                $(".rb").attr("disabled",true);
+
+            });
+
+        });
+        function getanswer()
+        {
+        document.getElementById(userAns).innerHTML="";
+        var e=document.getElementsByTagName("input");
+        for(i=0;i<=e.length;i++)
+        {
+            if(e[i].type=="radio")
+            { 
+                if(e[i].checked)
+                {
+                    document.getElementById(userAns).innerHTML+="Q"+e[i].name+"The answer you are selected is: "+e[i].value+ "</br>";
+                }
+                
+            }
+        }
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="navbar">
+            
+            <!-- header end -->
+            <!-- manu start -->
+            {% include './manu.html'%}    
+        </div>
+    </div>    
+    <div class="container">
+   <center><h1>Examination</h1></center> 
+   <div style="padding-left: 50px;">
+    {%for qun in qun%}
+    <table>
+        <tr>
+            <td>{{qun.id}} ) {{qun.question}} ?</td>
+            </tr>
+            <tr>
+            <td> <input type="radio" class="rb" id="op1" name="{{qun.id}}" value="{{qun.op1}}">{{qun.op1}}</td>
+        </tr>
+        <tr>
+            <td> <input type="radio" class="rb" id="op2" name="{{qun.id}}" value="{{qun.op2}}">{{qun.op2}}</td>
+        </tr>
+        <tr>
+            <td> <input type="radio" class="rb" id="op3" name="{{qun.id}}" value="{{qun.op3}}">{{qun.op3}}</td>
+        </tr>
+        <tr>
+            <td> <input type="radio" class="rb" id="op4" name="{{qun.id}}" value="{{qun.op4}}">{{qun.op4}}</td>
+        </tr>
+        <tr></tr>
+            <td><label id="corans" class="rb" style="display: none;color:green;"><b> The correct answer is: {{qun.ans}}</b></label></td>
+        </tr>
+        <hr>
+    </table>
+    {%endfor%}
+    <b id="userAns"> </b>
+    <hr>
+ 
+    <input type="submit" id="submit" value="GET RESULT" onclick="getanswer();">
+
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+
+.sidepic{
+    position: absolute;
+    top: 50px;
+    left:0px;
+}
+.sidepic img{
+    width: 800px;
+    height: 600px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    margin: 0 0 0 800px;
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.118);
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+.container h4{
+    color: rgb(37, 37, 37);
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    margin:50px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-group{
+    color: rgba(253, 253, 253, 0.405);
+    padding: 12px;
+    margin: 20px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color:none;
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    
+}
+.form-group label{
+    display: none;
+}
+.form-group input{
+    background-color: rgba(0, 0, 0, 0);
+    color:rgb(23, 24, 25);
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.form-group:hover{
+    background-color: rgba(255, 255, 255, 0.453);
+    color:aliceblue;
+}
+
+.submit{
+    padding: 10px 20px;
+    margin-left: 15px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.Clear{
+    padding: 10px 20px;
+    margin-left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cancel{
+    padding: 10px 20px;
+    margin-left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+ul{
+    padding: 0px;
+}
+li{
+    display: inline;
+    padding-left: 15px;
+}
+.Reg{
+    color: white;
+    text-decoration: none;
+    /* margin: 0; */
+}
+.fpass{
+    color: white;
+    text-decoration: none;   
+}
+::placeholder{
+    color: rgb(11, 11, 11);
+    size: 15px;
+}
+.footerlogo{
+    display: flex;
+    justify-content: center;
+    padding-left:10px ;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .footerlogo img{
+    width:40px;
+    height: 40px;
+    margin: 0 10px;
+    
+  }
+  .whatsapp{
+    border-radius: 100px;
+  }
+   input[type="checkbox" i] {
+    background-color: initial;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+    appearance: none;
+    -webkit-appearance: none;
+    }
+input[type="checkbox"]:after{
+    font-family: "font awesome 5 free";
+    font-size: larger;
+    font-weight: 900;
+    content: "\f06e";
+    /* color: rgb(255, 3, 3); */
+    
+}
+input[type="checkbox"]:checked{
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f06e";
+    color: rgb(30, 0, 255);
+}
+#box{
+    position: absolute;
+    right: 23%;
+    top: 355px;
+}

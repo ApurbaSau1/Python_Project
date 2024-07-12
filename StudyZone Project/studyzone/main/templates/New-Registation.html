@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Registation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'Registation.css'%}">
+  </head>
+
+  <body >
+  
+    <div>
+      <h4>User Registation</h4>
+    </div>
+    <section class="container">
+
+        <form name="frm" method="post" novalidate >
+            {% csrf_token %}
+            {% for fm in frm %}
+            <div class="form-group">
+              {{fm.label_tag}}&nbsp;&nbsp; <span class="text-danger">{{fm.errors | striptags}}</span>
+              {{fm}}
+            </div>
+            {%endfor%}
+            <input type="checkbox" name="box" id="box" onclick ="reveal()" class="check">
+            <input type="checkbox" name="box1" id="box1" onclick ="passrevil()" class="check">
+            <input type="submit" class="submit" value="Registation" onclick="submit()"></input>
+          
+            <input type="reset" class="Clear" value="Clear"></input>
+            <a href="{%url 'home'%}" class="cancel">Cancel</a> 
+            <!-- </div> -->
+        </form>
+      </section>
+      {% if msg %}
+        <script>
+            alert("Your Message has been send successfully");
+            window.location='/login';
+        </script>
+      {% endif %}
+    <script type="text/javascript">
+      function reveal()
+      {
+      if(document.getElementById('box').checked)
+         {document.getElementById("id_password1").type='text';}
+      else
+      document.getElementById("id_password1").type='password';
+      }
+      function passrevil()
+      {
+      if(document.getElementById('box1').checked)
+         {document.getElementById("id_password2").type='text';}
+      else
+      document.getElementById("id_password2").type='password';
+      }
+</script>   
+<!-- {%if rmsg%}
+<script>
+  fname = document.getElementById("id_first_name")
+  lname= document.getElementById("id_last_name")
+  alart(fname+" "+lname+" Your Registation is Successfully")
+</script>
+{%endif%} -->
+  </body>
+</html>

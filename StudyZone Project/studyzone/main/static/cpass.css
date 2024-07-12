@@ -1,0 +1,159 @@
+/* *{
+    box-sizing: border-box;
+} */
+body{
+    /* background: url('https://www.rd.com/wp-content/uploads/2021/03/kids-books-online-with-GettyImages-487042432.jpg'); */
+   height: 100vh;
+    background:linear-gradient(45deg ,rgba(116, 20, 133, 0.556),rgba(255, 255, 255, 0.8),rgba(19, 199, 175, 0.457));
+}
+h4{
+    font-size: 50px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+.navbar{
+    background:linear-gradient(45deg ,rgba(249, 249, 249, 0.19),rgba(243, 243, 126, 0.376),rgba(127, 225, 212, 0.457),rgba(60, 228, 155, 0.697),rgba(9, 162, 9, 0.403),rgba(181, 193, 72, 0.389));
+      box-sizing: border-box;
+      position: relative;
+      z-index: 5;
+      top:-10px;
+      border-radius: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.579);
+      box-shadow: -10px 5px rgba(0, 0, 0, 0.435);
+      justify-content: center;
+      /* height: 5000px; */
+      margin:10px 0;
+      width: 900px;
+      margin-left:20% ;
+  }
+  
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 750px;
+      gap: 10px;
+      justify-content: center;
+  }
+  .col-sm-2,.col-sm-1,.col-sm-3{
+      padding: 0px;
+      width: 110px;
+  }
+  .Programming{
+      margin-right: 20px;
+  }
+  .row-cols-2{
+      /* position: absolute; */
+      /* right: 0px; */
+      width: 90px;
+  }
+ 
+  .row-cols-3 .col-sm-2{
+      grid-column-start: 2;
+  width: 150px;
+  } 
+  a{
+      text-decoration: none;
+   } 
+     a:link {
+      color: rgb(0, 0, 0);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 17px;
+    }  
+    a:visited{
+      text-decoration: underline;
+      color: rgb(0, 0, 0);
+    }
+    .active{
+      background-color:rgb(18, 140, 118);
+      border-radius: 50px;
+    }
+    .active a{
+      color: rgb(255, 255, 255);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  a:hover{
+      
+      color:rgba(69, 63, 63, 0.583);
+      /* text-shadow: -10px -5px  rgba(0, 0, 0, 0.345); */
+  }
+  .container{
+    margin: 10px 0;
+    padding:10px 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+    /* align-items: center; */
+    margin: auto;
+    color: white;
+    /* margin-top: 50px; */
+    background-color: rgba(43, 41, 41, 0.214);
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+.form-group{
+    color: rgba(253, 253, 253, 0.405);
+    /* padding: 12px; */
+    /* margin: 20px; */
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    height: 70px;
+    /* background-color:none; */
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    
+}
+
+.form-group label{
+    margin-left:20px ;
+    color: rgb(0, 0, 0);
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-group input{
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 90%;
+    padding: 0;
+    margin: 0px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.287);
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-group::placeholder{
+display: none;
+}
+.form-group:hover input{
+    color:rgb(255, 255, 255);
+    font-size: large;
+ background-color: rgb(90, 86, 86);
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-group:hover label{
+    color:rgb(0, 0, 0);
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+.submit{
+    padding: 10px 20px;
+    margin-left: 200px;
+    margin-top: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-size: larger;
+}
+.text-danger{
+    display: none;
+}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{%static 'bootstrap.css'%}"> -->
+    <link rel="stylesheet" href="{%static 'contac.css'%}">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="form">
+        <h4>CONTACT US</h4>
+               <form method="post">
+                {% csrf_token %}
+                <!-- <label for="username">Your name: </label>
+                <input type="text" id="username" placeholder="Enter Your Username"size="27" class="me-3">
+                
+                <label for="email">Your: </label>
+                <input type="text" id="username" placeholder="Enter Your Username"size="27" class="me-3">
+                <br>
+                <br>
+                <label for="message" class="msg">Message: </label>
+                <textarea id="message" cols="30" rows="5"></textarea> -->
+                {{frm.as_p}}
+                <br>
+                <button type="submit" class="btn btn-light submit"> Submit</button>
+                
+                <button type="reset" class="btn btn-light Clear" > Clear</button>
+                <a href="{%url 'home'%}" class="cancel">Cancel</a> 
+            </form>
+            {%if msg%}
+            <script>
+                alert("Your Message has been send successfully");
+                window.location='/'
+            </script>
+            {%endif%}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UPDATE</title>
+    <link rel="stylesheet" href="{%static 'bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'Edit.css'%}">
+  </head>
+  <body >
+    <div>
+      <h4>UPDATE</h4>
+    </div>
+    <div class="navbar">
+      {% include './manu.html'%}    
+    </div>
+    <section class="container">
+         
+        <form name="frm" method="post">
+            {% csrf_token %}
+            {% for fm in frm %}
+            <div class="form-group">
+              {{fm.label_tag}}&nbsp;&nbsp; <span class="text-danger">{{fm.errors | striptags}}</span>
+              {{fm}}
+            </div>
+            {%endfor%}
+
+            <input type="submit" class="submit" value="Save Chanages">
+            <!-- </div> -->
+        </form>
+       </section>
+       <!-- {%if messages%}
+       <h1>{{messages}}</h1>             
+      {%endif%} -->
+  </body>
+</html>

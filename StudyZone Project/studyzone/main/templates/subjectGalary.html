@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Page</title>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{%static 'bootstrap.css'%}">
+     <link rel="stylesheet" href="{%static 'show.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+         <div class="logo">
+             <img src="{%static 'studylogo.jpg'%}" alt="" class="img">
+         </div>
+     
+     <div class="navbar">
+         
+         <!-- header end -->
+         <!-- manu start -->
+         {% include './manu.html'%}    
+     </div>
+ </div>  
+</div >
+<div class="container content">
+    {%for j in show%}
+            <ul>
+                <li><b>{{j.sub_name}}</b></li>
+                <!-- <li>{{j.sub_id}}</li> -->
+                <li><img src="{{j.sub_img.url}}" alt"ABC"></li>
+                <li><a href="{%url 'read_code' j.sub_id %}">Explore</a></li>
+            </ul>
+            {%endfor%}
+        </div>
+</body>
+</html>

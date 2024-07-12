@@ -1,0 +1,190 @@
+/* *{
+    box-sizing: border-box;
+} */
+body{
+    /* background: url('https://www.rd.com/wp-content/uploads/2021/03/kids-books-online-with-GettyImages-487042432.jpg'); */
+    background:linear-gradient(45deg ,rgb(99, 35, 125),rgba(255, 255, 255, 0.493),rgba(69, 69, 69, 0.493));
+height: 96.9vh;
+}
+a{
+    text-decoration: none;
+ } 
+   a:link {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+  }  
+  a:visited{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+  }
+  .active{
+    background-color:rgba(250, 249, 249);
+    border-radius: 50px;
+  }
+  .active a{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+a:hover{
+    
+    color:rgba(0, 0, 0, 0.583);
+    /* text-shadow: -10px -5px  rgba(0, 0, 0, 0.345); */
+}
+h4{
+    font-size: 50px;
+    text-align: center;
+    margin: 15px 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 635px;
+    width: 800px;
+    /* align-items: center; */
+    margin: auto;
+    /* margin-top: 40px; */
+    background-color:transparent;
+    /* box-shadow: inset -0px -5px rgba(0,0,0,0.5); */
+    border-radius: 25px;
+}
+.form-group{
+    color: rgba(253, 253, 253, 0);
+    padding: 5px;
+    margin: 15px;
+    /* width: 80%; */
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color:none;
+    box-shadow: inset -0px -5px rgba(0,0,0,0.5);
+    
+}
+
+.form-group label{
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px ;
+    font: bold;
+}
+.form-group input{
+    color:rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    /* font-size: 1px; */
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 10px;
+}
+::placeholder{
+    color: rgb(0, 0, 0);
+    size: 18px;
+}
+.form-group:hover{
+    background-color: rgb(255, 255, 255);
+}
+.form-group:hover ::placeholder{
+    color:rgb(0, 0, 0);
+}
+.form-group:hover label{
+    color:rgb(0, 0, 0);
+}
+.form-group:hover input{
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.submit{
+    padding: 10px 20px;
+    margin-left: 220px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-size: larger;
+}
+.Clear{
+    padding: 10px 20px;
+    margin-left: 30px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-size: larger;
+}
+.cancel{
+    padding: 10px 20px;
+    margin-left: 20px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: larger;
+}
+.text-danger:hover{
+    color: rgb(255, 0, 0);
+    }
+    .text-danger{
+        color: yellow;
+    }
+   h2{
+    color: greenyellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
+
+   input[type="checkbox" i] {
+    background-color: initial;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+    appearance: none;
+    -webkit-appearance: none;
+    }
+input[type="checkbox"]:after{
+    font-family: "font awesome 5 free";
+    font-size: larger;
+    font-weight: 900;
+    content: "\f06e";
+    /* color: rgb(255, 3, 3); */
+    
+}
+input[type="checkbox"]:checked{
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f06e";
+    color: rgb(0, 241, 80);
+}
+#box{
+    position: absolute;
+    right: 25%;
+    bottom: 24%;
+}
+
+#box1{
+    position: absolute;
+    right: 25%;
+    bottom: 14%;
+}
+.check{
+    width: 20px;
+    height: 20px;
+}

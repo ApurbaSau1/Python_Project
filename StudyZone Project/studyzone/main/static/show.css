@@ -1,0 +1,186 @@
+body{
+    background: url('./backAbout.jpg') no-repeat center/cover;
+   }
+
+   .header{
+     height: 200px;
+     /* display: flex; */
+     /* justify-content: center; */
+     /* align-items: center; */
+ }
+ .logo{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .img{
+     height: 100px;
+     width: 500px;
+     padding: 10px 0;
+     /* align-self: center; */
+     border-radius: 100px;
+ }
+ .navbar{
+     box-sizing: border-box;
+     position: relative;
+     z-index: 5;
+     background:linear-gradient(to left,rgba(137, 226, 202, 0.639),rgba(244, 155, 155, 0.743));
+     border-radius: 30px;
+     border: 2px solid black;
+     /* top:-10px; */
+     /* justify-content: center; */
+     /* height: 5000px; */
+ }
+ 
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+     width: 750px;
+     gap: 10px;
+     justify-content: center;
+ }
+ .col-sm-2,.col-sm-1,.col-sm-3{
+     padding: 0px;
+     width: 110px;
+ }
+ .Programming{
+     margin-right: 20px;
+ }
+ .row-cols-2{
+     /* position: absolute; */
+     /* right: 0px; */
+     width: 90px;
+ }
+ .row-cols-3{
+     position: absolute;
+     right: 0px;
+     width: 250px;
+     display: grid;
+     grid-template-columns: auto auto;
+ }
+ .row-cols-3 .col-sm-2{
+     grid-column-start: 2;
+ width: 150px;
+ } 
+ .row-cols-3 .col-sm-1{
+     grid-column-start: 1;
+ width: 100px;
+ } 
+ a{
+     text-decoration: none;
+  } 
+    a:link {
+     color: rgb(59, 55, 55);
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 17px;
+   }  
+   a:visited{
+     text-decoration: underline;
+     color: rgba(97, 74, 74, 0.862);
+   }
+   .active{
+     background-color:rgb(58, 244, 200);
+     border-radius: 50px;
+   }
+   .active a{
+     color: rgba(0, 0, 0, 0.865);
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+ a:hover{
+     
+     color:rgb(0, 0, 0);
+     /* text-shadow: -10px -5px  rgba(0, 0, 0, 0.345); */
+ }
+ /* .header  .photo, .text,.edit,.del{
+    display: none;
+    position: relative;
+  } */
+  ul img{
+    width: 230px;
+    height:150px;
+    border-radius: 20px 0;
+    border: 5px solid rgba(0, 0, 0, 0.818);
+  }
+  ul{
+    list-style-type: none;
+  }
+ 
+.content{
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* gap: 20px; */
+    row-gap: 40px;
+    justify-content: space-between;
+}
+b{
+    background-color: antiquewhite;
+  border-radius: 20px 20px;
+    color: rgb(37, 98, 152);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content ul li a{
+    background-color: aquamarine;
+    padding: 0 90px;
+    border-radius: 20px;
+}
+.content ul li a:hover{
+  background-color: blur;
+  box-shadow: -8px 5px rgb(85, 72, 72);
+}
+.photo{
+  position:absolute;
+  top: -20px;
+  left: 20px;
+  z-index: 1;
+}
+.header .text,.edit,.del,.cpass{
+display: none;
+position: relative;
+}
+.header .fa-user:hover .text{
+display: block;
+border: 2px solid black;
+width: 200px;
+height: 100px;
+padding:30px 20px 0 ;
+position: absolute;
+margin-right:50px ;
+top: 0px;
+left: 2px;
+font-size: medium;
+color: rgb(0, 0, 0);
+background:linear-gradient(to left,blue,rgb(250, 249, 249));
+border-radius: 20px;
+text-align: center;
+letter-spacing: 5px;
+cursor: pointer;
+}
+.header .fa-user:hover .edit{
+display: block;
+position: absolute;
+top: 50px;
+left: 60px;
+}
+.header .fa-user:hover .cpass{
+display: block;
+position: absolute;
+top: 48px;
+left: 90px;
+}
+.header .fa-user:hover .del{
+display: block;
+position: absolute;
+top: 50px;
+left: 120px;
+}
+.fa-lock{
+color: rgb(5, 119, 119);
+}
+.fa-user-pen{
+color: rgb(0, 38, 162);
+}
+.fa-trash{
+color: red;
+}
